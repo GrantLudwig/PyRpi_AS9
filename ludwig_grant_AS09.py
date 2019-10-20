@@ -9,7 +9,6 @@
 
 from graphics import *
 import math
-import random
 
 SCREEN_WIDTH = 500
 SCREEN_HEIGHT = 500
@@ -21,20 +20,9 @@ ballDiameter = BALL_RADIUS * 2
 balls = []
 velocities = []
 
-colors = ["Red",
-          "Green",
-          "Blue",
-          "Purple",
-          "Pink",
-          "Yellow",
-          "Orange",
-          "Brown"]
-
 win = GraphWin("Ball Bounce", SCREEN_WIDTH, SCREEN_HEIGHT, autoflush=False)
 
 def setupBalls():
-    randomColors = random.sample(colors, NUM_BALLS)
-
     leftBall = Circle(Point(100,250), BALL_RADIUS)
     middleBall = Circle(Point(250,250), BALL_RADIUS)
     rightBall = Circle(Point(400,250), BALL_RADIUS)
